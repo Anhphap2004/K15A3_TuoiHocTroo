@@ -1632,6 +1632,108 @@ body {
     display: block;
 }
 
+/* Social Links - Card Front (mini icons) */
+.member-social-front {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.social-link-mini {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.social-link-mini.social-fb {
+    background: #1877f2;
+}
+
+.social-link-mini.social-fb:hover {
+    background: #0d65d9;
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(24, 119, 242, 0.4);
+}
+
+.social-link-mini.social-zalo {
+    background: #0068ff;
+}
+
+.social-link-mini.social-zalo:hover {
+    background: #0052cc;
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(0, 104, 255, 0.4);
+}
+
+/* Social Links - Card Back (buttons) */
+.member-social-back {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.member-social-back.no-social {
+    margin-top: 12px;
+}
+
+.no-social-text {
+    font-size: 0.72rem;
+    opacity: 0.5;
+    font-style: italic;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+}
+
+.social-btn-fb {
+    background: rgba(24, 119, 242, 0.85);
+    border: 1px solid rgba(24, 119, 242, 0.5);
+}
+
+.social-btn-fb:hover {
+    background: #1877f2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(24, 119, 242, 0.5);
+}
+
+.social-btn-zalo {
+    background: rgba(0, 104, 255, 0.85);
+    border: 1px solid rgba(0, 104, 255, 0.5);
+}
+
+.social-btn-zalo:hover {
+    background: #0068ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 104, 255, 0.5);
+}
+
+.social-btn svg,
+.social-link-mini svg {
+    flex-shrink: 0;
+}
+
 /* ============================================
    ANIMATIONS
    ============================================ */
@@ -2221,6 +2323,38 @@ body {
 
     .back-contributed .amount {
         font-size: 1rem;
+    }
+
+    /* Social links mobile */
+    .social-link-mini {
+        width: 28px;
+        height: 28px;
+    }
+
+    .social-link-mini svg {
+        width: 13px;
+        height: 13px;
+    }
+
+    .social-btn {
+        padding: 5px 10px;
+        font-size: 0.68rem;
+        gap: 4px;
+    }
+
+    .social-btn svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .member-social-back {
+        margin-top: 8px;
+        gap: 6px;
+    }
+
+    .member-social-front {
+        margin-top: 6px;
+        gap: 6px;
     }
 
     /* Intro extras */

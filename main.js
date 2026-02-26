@@ -22,13 +22,13 @@ const MEMBERS = {
     { name: 'Đặng Ngọc Ánh',           donation: 0      },
     { name: 'Nguyễn Thị Linh Chi',     donation: 0      },
     { name: 'Nguyễn Thị Dương',        donation: 0      },
-    { name: 'Nguyễn Thị Hải',          donation: 100000 },
+    { name: 'Phạm Thị Hải',          donation: 100000 },
     { name: 'Nguyễn Thị Hằng',         donation: 0      },
     { name: 'Nguyễn Thị Kim Anh',      donation: 200000 },
     { name: 'Nguyễn Thị Hồng',         donation: 0      },
     { name: 'Võ Thị Mùi',              donation: 0      },
     { name: 'Trương Ngọc Nhi',         donation: 0      },
-    { name: 'Nguyễn Thị Yến Nhi',      donation: 0      },
+    { name: 'Phan Yến Nhi',      donation: 0      },
     { name: 'Đào Hải Uyên',            donation: 0      },
     { name: 'Út Trà',                  donation: 0      },
     { name: 'Lê Thị Thanh Xuyến',      donation: 100000 },
@@ -72,13 +72,13 @@ const MEMBER_PHOTO_MAP = {
   'Đặng Ngọc Ánh': 'images/dangngocanh.jpg',
   'Nguyễn Thị Linh Chi': 'images/linhchi.jpg',
   'Nguyễn Thị Dương': 'images/nguyenthiduong.jpg',
-  'Nguyễn Thị Hải': 'images/nguyenthihai.jpg',
+  'Phạm Thị Hải': 'images/nguyenthihai.jpg',
   'Nguyễn Thị Hằng': 'images/nguyenthihang.jpg',
   'Nguyễn Thị Kim Anh': 'images/kimanh.png',
-  'Nguyễn Thị Hồng': 'images/nguyenthihong.jpg',
+  'Nguyễn Thị Hồng': 'images/hong.jfif',
   'Võ Thị Mùi': 'images/vothimui.jpg',
   'Trương Ngọc Nhi': 'images/trungngocnhi.jpg',
-  'Nguyễn Thị Yến Nhi': 'images/phanyennhi.png',
+  'Phan Yến Nhi': 'images/phanyennhi.png',
   'Đào Hải Uyên': 'images/daohaiuyen.jpg',
   'Út Trà': 'images/uttra.png',
   'Lê Thị Thanh Xuyến': 'images/lethithanhxuyen.jpg',
@@ -98,7 +98,7 @@ const MEMBER_PHOTO_MAP = {
   'Nguyễn Thị Lộc': 'images/nguyenthiloc.jpg',
   'Nguyễn Hoàng Kiều Khanh': 'images/kieukhanh.jpg',
   'Anhh Phapp': 'images/AnhhPhapp.jpg',
-  'Nguyễn Văn Kiểm': 'images/nguyenvankiem.jpg',
+  'Nguyễn Văn Kiểm': 'images/nkiem.jpg',
   'Lê Trọng Nghĩa': 'images/trongnghia.jpg',
   'Đặng Việt Đức': 'images/dangvietduc2.jpg',
   'Nguyễn Trung Đô': 'images/trungdo.jpg',
@@ -115,6 +115,52 @@ const MEMBER_PHOTO_MAP = {
 const DEFAULT_MEMBER_PHOTO = {
   female: 'images/hoaithu.jpg',
   male: 'images/AnhhPhapp.jpg',
+};
+
+// Social links map: { 'Tên': { fb: 'link_fb', zalo: 'link_zalo' } }
+const MEMBER_SOCIAL_MAP = {
+  'Hoàng Quỳnh An':           { fb: 'https://www.facebook.com/profile.php?id=61581759576788#', zalo: '0' },
+  'Đặng Ngọc Ánh':             { fb: 'https://www.facebook.com/anh.ang.120408', zalo: '0' },
+  'Nguyễn Thị Linh Chi':       { fb: 'https://www.facebook.com/profile.php?id=100037087776141', zalo: '0' },
+  'Nguyễn Thị Dương':          { fb: 'https://www.facebook.com/nguyen.thi.duong.55188', zalo: '0' },
+  'Phạm Thị Hải':            { fb: 'https://www.facebook.com/phamthihai.73157', zalo: '0' },
+  'Nguyễn Thị Hằng':           { fb: 'https://www.facebook.com/terexa.hang.2025', zalo: '0' },
+  'Nguyễn Thị Kim Anh':        { fb: 'https://www.facebook.com/anktrung.04', zalo: '0' },
+  'Nguyễn Thị Hồng':           { fb: 'https://www.facebook.com/hong.nt.1694#', zalo: '0' },
+  'Võ Thị Mùi':                { fb: 'https://www.facebook.com/mui.vo.5030', zalo: '0' },
+  'Trương Ngọc Nhi':           { fb: 'https://www.facebook.com/nhi.truong.743643', zalo: '0' },
+  'Phan Yến Nhi':        { fb: 'https://www.facebook.com/yennhi.phanthi.16144', zalo: '0' },
+  'Đào Hải Uyên':              { fb: 'https://www.facebook.com/yennhi.phanthi.16144', zalo: '0' },
+  'Út Trà':                    { fb: 'https://www.facebook.com/angthiuttra', zalo: '0' },
+  'Lê Thị Thanh Xuyến':        { fb: 'https://www.facebook.com/lethithanhxuyen', zalo: '0' },
+  'Nguyễn Thương':             { fb: 'https://www.facebook.com/nguyen.thuong.572660', zalo: '0' },
+  'Hoài Thu':                  { fb: 'https://www.facebook.com/hoai.thu.940174', zalo: '0' },
+  'Phạm Thị Chuyên':           { fb: 'https://www.facebook.com/pham.thi.chuyen.80330', zalo: '0' },
+  'Trần Trà My':               { fb: 'https://www.facebook.com/tramy.trannguen.1', zalo: '0' },
+  'Nguyễn Thị Anh Ngọc':      { fb: 'https://www.facebook.com/ngoc.chery.564', zalo: '0' },
+  'Nguyễn Thị Hiền':           { fb: 'https://www.facebook.com/ngoc.chery.564', zalo: '0' },
+  'Nguyễn Thị Thanh Hiền':    { fb: 'https://www.facebook.com/profile.php?id=100023313194483', zalo: '0' },
+  'Phương Nguyễn':             { fb: 'https://www.facebook.com/phuong.nguyen.984775', zalo: '0' },
+  'Lê Thị Tâm':                { fb: 'https://www.facebook.com/tam.le.669532', zalo: '0' },
+  'C Hoà':                     { fb: 'https://www.facebook.com/huongduongntth', zalo: '0' },
+  'Hồ Thiên Nga':              { fb: 'https://www.facebook.com/honga1508', zalo: '0' },
+  'Tăng Thị Lê Na':            { fb: 'https://www.facebook.com/tang.thi.le.na', zalo: '0' },
+  'Phan Thục Nguyên':          { fb: 'https://www.facebook.com/search/top?q=phan%20th%E1%BB%A5c%20nguy%C3%AAn', zalo: '0' },
+  'Nguyễn Thị Lộc':            { fb: 'https://www.facebook.com/nguyen.thi.loc.246622', zalo: '0' },
+  'Nguyễn Hoàng Kiều Khanh':   { fb: 'https://www.facebook.com/profile.php?id=100081158735558', zalo: '0' },
+  'Anhh Phapp':                { fb: 'https://www.facebook.com/AnhPhapp24/', zalo: '' },
+  'Nguyễn Văn Kiểm':          { fb: 'https://www.facebook.com/nguyen.kiem.172763', zalo: '0' },
+  'Lê Trọng Nghĩa':           { fb: 'https://www.facebook.com/le.trong.nghia.262819', zalo: '0' },
+  'Đặng Việt Đức':             { fb: 'https://www.facebook.com/hello.mr.duck', zalo: '0' },
+  'Nguyễn Trung Đô':          { fb: 'https://www.facebook.com/profile.php?id=61577026611132', zalo: '0' },
+  'Lê Quang Huy':              { fb: 'https://www.facebook.com/guang.hui.5204', zalo: '0' },
+  'Trần Văn Lực':              { fb: 'https://www.facebook.com/luctran0212', zalo: '0' },
+  'Nguyễn Đình Thành':        { fb: 'https://www.facebook.com/thanh.inh.970336', zalo: '0' },
+  'Nguyễn Công Nhất':         { fb: 'https://www.facebook.com/thanh.inh.970336', zalo: '0' },
+  'Nguyễn Đình Mạnh':         { fb: 'https://www.facebook.com/manhz14', zalo: '0' },
+  'Đặng Văn Khoa':             { fb: 'https://www.facebook.com/khoa.docle.18', zalo: '0' },
+  'Phan Quyết Anh':            { fb: 'https://www.facebook.com/anh.phanquyet.90', zalo: '0' },
+  'Nguyễn Minh Quân':         { fb: 'https://www.facebook.com/nmquan.1808', zalo: '0' },
 };
 
 // Gallery photos - from images/kiniem folder (kỉ niệm)
@@ -615,8 +661,16 @@ function renderMembers(genderFilter, searchText) {
   grid.innerHTML = '';
 
   const allMembers = [
-    ...MEMBERS.female.map(m => ({ ...m, gender: 'female', photo: MEMBER_PHOTO_MAP[m.name] || DEFAULT_MEMBER_PHOTO.female })),
-    ...MEMBERS.male.map(m => ({ ...m, gender: 'male', photo: MEMBER_PHOTO_MAP[m.name] || DEFAULT_MEMBER_PHOTO.male })),
+    ...MEMBERS.female.map(m => ({
+      ...m, gender: 'female',
+      photo: MEMBER_PHOTO_MAP[m.name] || DEFAULT_MEMBER_PHOTO.female,
+      social: MEMBER_SOCIAL_MAP[m.name] || { fb: '', zalo: '' },
+    })),
+    ...MEMBERS.male.map(m => ({
+      ...m, gender: 'male',
+      photo: MEMBER_PHOTO_MAP[m.name] || DEFAULT_MEMBER_PHOTO.male,
+      social: MEMBER_SOCIAL_MAP[m.name] || { fb: '', zalo: '' },
+    })),
   ];
 
   const filtered = allMembers.filter(m => {
@@ -630,9 +684,38 @@ function renderMembers(genderFilter, searchText) {
     card.className = 'member-card';
     const genderLabel = m.gender === 'female' ? '🌺 Nữ' : '🛡️ Nam';
     const badgeClass  = m.gender === 'female' ? 'badge-female' : 'badge-male';
-    const donStr      = m.donation > 0 ? m.donation.toLocaleString('vi-VN') + 'đ' : 'Chưa quyên';
+  
     const donColor    = m.donation > 0 ? '#27ae60' : '#b2bec3';
     const icon        = m.gender === 'female' ? '🌸' : '⚽';
+
+    // Build social links HTML
+    const hasFb = m.social.fb && m.social.fb.trim() !== '';
+    const hasZalo = m.social.zalo && m.social.zalo.trim() !== '';
+    const hasSocial = hasFb || hasZalo;
+
+    const socialFrontHtml = hasSocial ? `
+      <div class="member-social-front">
+        ${hasFb ? `<a href="${m.social.fb}" target="_blank" rel="noopener" class="social-link-mini social-fb" title="Facebook" onclick="event.stopPropagation()">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>` : ''}
+        ${hasZalo ? `<a href="${m.social.zalo}" target="_blank" rel="noopener" class="social-link-mini social-zalo" title="Zalo" onclick="event.stopPropagation()">
+          <svg viewBox="0 0 48 48" width="16" height="16" fill="currentColor"><path d="M24 4C12.954 4 4 12.954 4 24s8.954 20 20 20 20-8.954 20-20S35.046 4 24 4zm-3.2 29.6c-1.2 0-2.133-.267-2.933-.667l-3.267 1.067.933-2.933c-.533-.867-.933-1.933-.933-3.067 0-3.467 2.8-6.267 6.267-6.267s6.267 2.8 6.267 6.267-2.867 6.6-6.333 6.6zm10.4-7.867c0-1.933-1.067-3.6-2.667-4.467 1.133-1.267 1.867-2.933 1.867-4.8 0-3.933-3.2-7.133-7.133-7.133A7.13 7.13 0 0016.133 16.467c0 1.867.733 3.533 1.867 4.8-1.6.867-2.667 2.533-2.667 4.467 0 2.8 2.267 5.067 5.067 5.067.8 0 1.533-.2 2.2-.533.667.333 1.4.533 2.2.533 2.8 0 5.067-2.267 5.067-5.067h1.333z"/></svg>
+        </a>` : ''}
+      </div>
+    ` : '';
+
+    const socialBackHtml = hasSocial ? `
+      <div class="member-social-back">
+        ${hasFb ? `<a href="${m.social.fb}" target="_blank" rel="noopener" class="social-btn social-btn-fb" onclick="event.stopPropagation()">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook
+        </a>` : ''}
+        ${hasZalo ? `<a href="${m.social.zalo}" target="_blank" rel="noopener" class="social-btn social-btn-zalo" onclick="event.stopPropagation()">
+          <svg viewBox="0 0 48 48" width="14" height="14" fill="currentColor"><path d="M24 4C12.954 4 4 12.954 4 24s8.954 20 20 20 20-8.954 20-20S35.046 4 24 4zm-3.2 29.6c-1.2 0-2.133-.267-2.933-.667l-3.267 1.067.933-2.933c-.533-.867-.933-1.933-.933-3.067 0-3.467 2.8-6.267 6.267-6.267s6.267 2.8 6.267 6.267-2.867 6.6-6.333 6.6zm10.4-7.867c0-1.933-1.067-3.6-2.667-4.467 1.133-1.267 1.867-2.933 1.867-4.8 0-3.933-3.2-7.133-7.133-7.133A7.13 7.13 0 0016.133 16.467c0 1.867.733 3.533 1.867 4.8-1.6.867-2.667 2.533-2.667 4.467 0 2.8 2.267 5.067 5.067 5.067.8 0 1.533-.2 2.2-.533.667.333 1.4.533 2.2.533 2.8 0 5.067-2.267 5.067-5.067h1.333z"/></svg>
+          Zalo
+        </a>` : ''}
+      </div>
+    ` : '<div class="member-social-back no-social"><span class="no-social-text">Chưa cập nhật liên kết</span></div>';
 
     card.innerHTML = `
       <div class="member-card-inner">
@@ -643,9 +726,7 @@ function renderMembers(genderFilter, searchText) {
           </div>
           <div class="member-full-name">${m.name}</div>
           <span class="member-gender-badge ${badgeClass}">${genderLabel}</span>
-          <div class="member-donation-preview">
-            Đóng góp: <span style="color:${donColor}">${donStr}</span>
-          </div>
+          ${socialFrontHtml}
         </div>
         <div class="card-back ${m.gender}">
           <div class="back-icon">${icon}</div>
@@ -653,10 +734,7 @@ function renderMembers(genderFilter, searchText) {
           <div class="back-divider"></div>
           <div class="back-label">GIỚI TÍNH</div>
           <div class="back-val">${genderLabel}</div>
-          <div class="back-contributed">
-            <div class="back-label">ĐÓNG GÓP QUỸ LỚP</div>
-            <span class="amount" style="color:${m.donation > 0 ? '#ffd700' : 'rgba(255,255,255,0.5)'}">${donStr}</span>
-          </div>
+          ${socialBackHtml}
         </div>
       </div>
     `;
